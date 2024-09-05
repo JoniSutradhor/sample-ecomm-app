@@ -1,17 +1,17 @@
-import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom'; // Import MemoryRouter for routing
-import { Provider } from 'react-redux'; // Import Provider for Redux
-import { store } from './store/store'; // Import your Redux store
-import Header from './layouts/Header';
+import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
+import Header from "./layouts/Header";
 
-test('Find Product Menu', () => {
+test("Find Product Menu", () => {
   render(
-    <Provider store={store}> {/* Wrap with Provider for Redux */}
-      <MemoryRouter> {/* Wrap with MemoryRouter for routing */}
+    <Provider store={store}>
+      <MemoryRouter>
         <Header />
       </MemoryRouter>
     </Provider>
   );
-  const linkElement = screen.getByText('Products');
+  const linkElement = screen.getByText("Products");
   expect(linkElement).toBeInTheDocument();
 });
