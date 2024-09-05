@@ -9,7 +9,11 @@ const StarRating = ({ rating }) => {
         const isActive = i < rating;
         return (
           <IconButton key={i} sx={{ color: isActive ? "#FFFF00" : "#808080" }}>
-            {isActive ? <Star /> : <StarBorder />}
+            {isActive ? (
+              <Star fontSize="small" />
+            ) : (
+              <StarBorder fontSize="small" />
+            )}
           </IconButton>
         );
       })}

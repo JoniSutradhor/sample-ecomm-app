@@ -76,7 +76,7 @@ const ProductPage = () => {
           <option value="generation-5">Generation 5</option>
           <option value="generation-8">Generation 8</option>
         </select>
-        <label className="ml-4">Rating: </label>
+        <label className="md:ml-4">Rating: </label>
         <select onChange={handleRatingChange} className="ml-2 border h-8">
           <option value="0">All</option>
           <option value="4">4 Stars & Up</option>
