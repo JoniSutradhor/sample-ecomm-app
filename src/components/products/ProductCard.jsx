@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../store/productSlice";
 import StarRating from "./StarRating";
+import { Box } from "@mui/material";
 
 export default function ProductCard({ product }) {
   const dispatch = useDispatch();
@@ -36,9 +37,11 @@ export default function ProductCard({ product }) {
         </div>
       </CardContent>
       <CardActions>
-        <Button onClick={() => handleAddToCart(product)} size="small">
-          Add to Cart
-        </Button>
+        <Box sx={{ display: "flex", justifyContent: "center", width: "100%" }}>
+          <Button onClick={() => handleAddToCart(product)} size="small">
+            Add to Cart
+          </Button>
+        </Box>
       </CardActions>
     </Card>
   );
