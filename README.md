@@ -10,9 +10,6 @@ Then Run the command to run the project
 This will runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### To run the test cases run this command
-#### `npm test`
-
 
 Feel free to reach me if you have any kind of queries, suggestions or concerns
 
